@@ -30,3 +30,12 @@ Output filename:
 PLA-Matte-Black-10110.stl
 
 
+Example call from terminal: 
+
+For one STL
+python3 stlgenV2.py PLA Basic Silver 12344
+
+For multiple STL
+python3 batch_generate.py filament.csv -s stlgenV2.py -d stl_out
+
+
