@@ -1,11 +1,32 @@
-The stlgenV2.py will generate a STl file that can be printed for a filament chip, similar to a paint chip.
+# STL Filament Chip Generator
 
-The script has four parameters, Material, Type, Color, and Code.  These are included as raised text on the final print so the user will know what color they are holding.
+This project contains scripts for generating STL files for printable filament chips, similar to paint chips.
 
-The file the script creates will use these four parameters in the filename.  (e.g PLA Matte Black 10110) would produce an STL file named PLA-Matte-Black-10110.stl.
+## `stlgenV2.py`
 
+`stlgenV2.py` generates a single STL file for a filament chip.
 
-The batch_generate.py script will parase a CSV that contains these values and create a STL for each line.
+The script accepts four parameters:
 
-The batch_generate.py script will not process any line starting with a #.  You don't have to delete previously generated STL files, you can just use a # to comment the line.
+- `Material`
+- `Type`
+- `Color`
+- `Code`
+
+These values are included as raised text on the final print so the user can identify the chip they are holding.
+
+The generated STL filename is created from the same four parameters, using hyphens between the values.
+
+### Example
+
+Input:
+
+- Material: `PLA`
+- Type: `Matte`
+- Color: `Black`
+- Code: `10110`
+
+Output filename:
+PLA-Matte-Black-10110.stl
+
 
